@@ -53,6 +53,6 @@ export class AppComponent {
       }
     });
     console.log('telemetry');
-    this.telemetryService.start('11111');
+    this.telemetryService.start('1');
   }
 }

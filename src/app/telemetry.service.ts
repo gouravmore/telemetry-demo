@@ -85,7 +85,7 @@ export class TelemetryService {
   public interact(id) {
     CsTelemetryModule.instance.telemetryService.raiseInteractTelemetry({
       options: this.getEventOptions(),
-      edata: { type: 'TOUCH', subtype: '', id, pageid: '' }
+      edata: { type: 'TOUCH', subtype: '', id, pageid: id }
     });
   }
 

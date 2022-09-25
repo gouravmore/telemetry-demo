@@ -1,18 +1,18 @@
 <div>
   <h1>Home</h1>
   <hr>
-  <h3>CLICK BELOW BUTTON TO END THE GAME</h3>
+  <h3>CLICK BELOW BUTTON NAVIGATE</h3>
 
-  <button (click)="telemetryService.end()">
+  <button (click)="telemetryService.end(); telemetryService.interact('');">
       <h3>CLOSE ME</h3>
   </button>
-  <button routerLink="/1">
+  <button routerLink="/1" (click)="telemetryService.interact(1);">
       <h3>Page 1</h3>
   </button>
-  <button routerLink="/2">
+  <button routerLink="/2" (click)="telemetryService.interact(2);">
     <h3>Page 2</h3>
 </button>
-<button routerLink="/3">
+<button routerLink="/3" (click)="telemetryService.interact(3);">
   <h3>Page 3</h3>
 </button>
 
