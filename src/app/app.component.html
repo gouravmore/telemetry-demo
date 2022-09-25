@@ -1,15 +1,20 @@
 <div>
-  <h1>HTML-CONTENT</h1>
+  <h1>Home</h1>
   <hr>
   <h3>CLICK BELOW BUTTON TO END THE GAME</h3>
 
   <button (click)="telemetryService.end()">
       <h3>CLOSE ME</h3>
   </button>
-  <button (click)="telemetryService.interact({'type':'TOUCH','id':'next','extype':null,'eks':{'stageId':'splash'}})">
-      <h3>Interact</h3>
+  <button routerLink="/1">
+      <h3>Page 1</h3>
   </button>
-  <button (click)="telemetryService.impression({'stageid':'stage1','stageto':'stage2'})">
-      <h3>Impression</h3>
-  </button>
+  <button routerLink="/2">
+    <h3>Page 2</h3>
+</button>
+<button routerLink="/3">
+  <h3>Page 3</h3>
+</button>
+
 </div>
+<router-outlet></router-outlet>

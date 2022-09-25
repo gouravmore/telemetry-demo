@@ -45,22 +45,11 @@ export class AppComponent {
         }
       },
       config: {
-        toolBar: {
-          showZoomButtons: false
-        },
-        sideMenu: {
-          showShare: true,
-          showDownload: true,
-          showReplay: true,
-          showExit: true,
-          showPrint: true
-        }
       },
       // tslint:disable-next-line:max-line-length
       metadata: {
         identifier: 'do_31291455031832576019477',
-        name: 'B301,B302_STD_1_TAMIL,ENGLISH_LANG_TERM 1_OPT',
-        streamingUrl: 'https://ntpproductionall.blob.core.windows.net/ntp-content-production/content/assets/do_31291458881611366418883/b331332333_std_5_mathssciencesocial_tm_term-1_opt.pdf'
+        name: 'B301,B302_STD_1_TAMIL,ENGLISH_LANG_TERM 1_OPT'
       }
     });
     console.log('telemetry');
