@@ -36,8 +36,8 @@ export class AppComponent {
           ''
         ],
         timeDiff: 0,  // Defines the time difference// Defines the object roll up data
-        host: '', // Defines the from which domain content should be load
-        endpoint: '',
+        host: 'https://dev-nsdc-registry.nsdcindia.co', // Defines the from which domain content should be load
+        endpoint: '/telemetry/v1/telemetry',
         dispatcher: {
           dispatch(event) {
             console.log(`Events from dispatcher: ${JSON.stringify(event)}`);
