@@ -8,7 +8,10 @@ import { TelemetryService } from './telemetry.service';
 export class AppComponent {
   title = 'telemetry-demo';
 
-  // @HostListener('document:TelemetryEvent', ['$event'])
+  @HostListener('document:TelemetryEvent', ['$event'])
+  onTelemetryEvent(event) {
+    console.log('event===============', event);
+  }
 
   constructor(
     public telemetryService: TelemetryService,
@@ -37,12 +40,8 @@ export class AppComponent {
         ],
         timeDiff: 0,  // Defines the time difference// Defines the object roll up data
         host: 'https://dev-nsdc-registry.nsdcindia.co', // Defines the from which domain content should be load
-        endpoint: '/telemetry/v1/telemetry',
-        dispatcher: {
-          dispatch(event) {
-            console.log(`Events from dispatcher: ${JSON.stringify(event)}`);
-          }
-        }
+        apislug: '/telemetry/',
+        endpoint: 'v1/telemetry'
       },
       config: {
       },

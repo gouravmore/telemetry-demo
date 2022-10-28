@@ -35,6 +35,7 @@ export class TelemetryService {
           batchsize: 20,
           mode: context.mode,
           host: context.host || '',
+          apislug: '/telemetry/',
           endpoint: context.endpoint || '/data/v3/telemetry',
           tags: context.tags,
           cdata: [{ id: this.contentSessionId, type: 'ContentSession' },
