@@ -7,6 +7,7 @@ import { TelemetryService } from './telemetry.service';
 })
 export class AppComponent {
   title = 'telemetry-demo';
+  searchText = '';
 
   @HostListener('document:TelemetryEvent', ['$event'])
   onTelemetryEvent(event) {

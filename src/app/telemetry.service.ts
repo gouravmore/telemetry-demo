@@ -90,6 +90,21 @@ export class TelemetryService {
     });
   }
 
+  public search(id) {
+    CsTelemetryModule.instance.telemetryService.raiseSearchTelemetry({
+      options: this.getEventOptions(),
+      edata: { // Required
+        type: 'content', // Required. content, assessment, asset
+        query: id, // Required. Search query string
+        filters: {}, // Optional. Additional filters
+        sort: {}, // Optional. Additional sort parameters
+        correlationid: '', // Optional. Server generated correlation id (for mobile app's telemetry)
+        size: 0, // Required. Number of search results
+        topn: [{}] // Required. top N (configurable) results with their score
+    }
+    });
+  }
+
   public impression(currentPage) {
     CsTelemetryModule.instance.telemetryService.raiseImpressionTelemetry({
       options: this.getEventOptions(),

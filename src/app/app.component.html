@@ -2,7 +2,10 @@
   <h1>Home</h1>
   <hr>
   <h3>CLICK BELOW BUTTON NAVIGATE</h3>
-
+  <input [(ngModel)]="searchText">
+  <button (click)="telemetryService.search(searchText);">
+    <h3>search</h3>
+  </button>
   <button (click)="telemetryService.end(); telemetryService.interact('');">
       <h3>CLOSE ME</h3>
   </button>
