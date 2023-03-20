@@ -1,4 +1,5 @@
 import { Component, HostListener, Output } from '@angular/core';
+import { SearchService } from './search.service';
 import { TelemetryService } from './telemetry.service';
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ export class AppComponent {
   }
 
   constructor(
+    public searchService: SearchService,
     public telemetryService: TelemetryService,
   ) {
   }
@@ -54,5 +56,25 @@ export class AppComponent {
     });
     console.log('telemetry');
     this.telemetryService.start('1');
+    console.log(this.searchContent());
+  }
+  searchContent(){
+    this.searchService.post({
+      url: 'api',
+      data: {
+        filters: {
+          status: [
+            'Live'
+          ],
+          objectType: 'Content'
+        },
+        query: '',
+        sort_by: {
+          lastUpdatedOn: 'desc'
+        }
+      }
+    }).subscribe((responseBody) => {
+      console.log(responseBody);
+});
   }
 }
